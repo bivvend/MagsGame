@@ -1,0 +1,17 @@
+D:\Github\MagsGame\MagsGame\bin\Debug\MagsGame.exe.config
+D:\Github\MagsGame\MagsGame\bin\Debug\MagsGame.exe
+D:\Github\MagsGame\MagsGame\bin\Debug\MagsGame.pdb
+D:\Github\MagsGame\MagsGame\obj\Debug\MainWindow.g.cs
+D:\Github\MagsGame\MagsGame\obj\Debug\App.g.cs
+D:\Github\MagsGame\MagsGame\obj\Debug\MagsGame_MarkupCompile.cache
+D:\Github\MagsGame\MagsGame\obj\Debug\MagsGame_MarkupCompile.lref
+D:\Github\MagsGame\MagsGame\obj\Debug\MainWindow.baml
+D:\Github\MagsGame\MagsGame\obj\Debug\MagsGame.g.resources
+D:\Github\MagsGame\MagsGame\obj\Debug\MagsGame.Properties.Resources.resources
+D:\Github\MagsGame\MagsGame\obj\Debug\MagsGame.csproj.GenerateResource.Cache
+D:\Github\MagsGame\MagsGame\obj\Debug\MagsGame.csproj.CoreCompileInputs.cache
+D:\Github\MagsGame\MagsGame\obj\Debug\MagsGame.exe
+D:\Github\MagsGame\MagsGame\obj\Debug\MagsGame.pdb
+D:\Github\MagsGame\MagsGame\obj\Debug\Board\BoardView.g.cs
+D:\Github\MagsGame\MagsGame\obj\Debug\Board\BoardView.baml
+D:\Github\MagsGame\MagsGame\obj\Debug\GeneratedInternalTypeHelper.g.cs

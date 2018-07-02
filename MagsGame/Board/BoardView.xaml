@@ -1,0 +1,64 @@
+﻿<UserControl x:Class="MagsGame.Board.BoardView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:MagsGame.Board"
+             mc:Ignorable="d" 
+            d:DesignHeight="400" d:DesignWidth="300">
+    <UserControl.Resources>
+        <BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter"/>
+    </UserControl.Resources>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"></ColumnDefinition>
+            <ColumnDefinition Width="11*"></ColumnDefinition>
+            <ColumnDefinition Width="1*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"></RowDefinition>
+            <RowDefinition Height="11*"></RowDefinition>
+            <RowDefinition Height="1*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <!--<Image Name="BorderTopLeft" Grid.Row="0" Grid.Column="0" Source="/Tafl;component/Resources/corner-tl.bmp" Stretch="Fill"></Image>
+        <Image Name="BorderTop" Grid.Row="0" Grid.Column="1" Source="/Tafl;component/Resources/top.bmp" Stretch="Fill"></Image>
+        <Image Name="BorderTopRight" Grid.Row="0" Grid.Column="2" Source="/Tafl;component/Resources/corner-tr.bmp" Stretch="Fill"></Image>
+        <Image Name="BorderRight" Grid.Row="1" Grid.Column="2" Source="/Tafl;component/Resources/right.bmp" Stretch="Fill"></Image>
+        <Image Name="BorderBottomRight" Grid.Row="2" Grid.Column="2" Source="/Tafl;component/Resources/corner-br.bmp" Stretch="Fill"></Image>
+        <Image Name="BorderBottom" Grid.Row="2" Grid.Column="1" Source="/Tafl;component/Resources/bottom.bmp" Stretch="Fill"></Image>
+        <Image Name="BorderBottomLeft" Grid.Row="2" Grid.Column="0" Source="/Tafl;component/Resources/corner-bl.bmp" Stretch="Fill"></Image>
+        <Image Name="BorderLeft" Grid.Row="1" Grid.Column="0" Source="/Tafl;component/Resources/left.bmp" Stretch="Fill"></Image>-->
+        <ItemsControl ItemsSource="{Binding Path=Board}" Grid.Column="1" Grid.Row="1">
+            <ItemsControl.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <UniformGrid Columns="{Binding SizeX}" Rows="{Binding SizeY}" />
+                </ItemsPanelTemplate>
+            </ItemsControl.ItemsPanel>
+            <ItemsControl.ItemTemplate>
+                <DataTemplate>
+                    <ContentControl Background="Gray">
+                        <Grid>
+                            <Image Source="{Binding ImageName}" Stretch="Fill">
+                                <Image.InputBindings>
+                                    <MouseBinding 
+                                    MouseAction="LeftClick" 
+                                    Command="{Binding RelativeSource={RelativeSource AncestorType={x:Type ItemsControl}},Path=DataContext.SquareClickCommand}"
+                                    CommandParameter="{Binding Coords}">
+                                    </MouseBinding>
+                                </Image.InputBindings>
+                            </Image>
+                            <Rectangle Name="AttackerMarker" Margin="3"  Visibility="{Binding LavaPresent, Converter={StaticResource BooleanToVisibilityConverter}}">
+                                <Rectangle.Fill>
+                                    <ImageBrush ImageSource="/MagsGame;component/Resources/lava.jpg"  Stretch="Fill"></ImageBrush>
+                                </Rectangle.Fill>
+                            </Rectangle>
+                            <Border BorderThickness="3" BorderBrush="Green" Visibility="{Binding Selected,  Converter={StaticResource BooleanToVisibilityConverter}}"></Border>
+                            <Border BorderThickness="3" BorderBrush="LightGreen" Visibility="{Binding Highlighted,  Converter={StaticResource BooleanToVisibilityConverter}}">
+                            </Border>                            
+                        </Grid>
+                    </ContentControl>
+                </DataTemplate>
+            </ItemsControl.ItemTemplate>
+        </ItemsControl>
+    </Grid>
+</UserControl>
