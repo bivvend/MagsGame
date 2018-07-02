@@ -47,7 +47,7 @@
                                     </MouseBinding>
                                 </Image.InputBindings>
                             </Image>
-                            <Rectangle Name="AttackerMarker" Margin="3"  Visibility="{Binding LavaPresent, Converter={StaticResource BooleanToVisibilityConverter}}">
+                            <Rectangle Name="AttackerMarker" Margin="0"  Visibility="{Binding LavaPresent, Converter={StaticResource BooleanToVisibilityConverter}}">
                                 <Rectangle.Fill>
                                     <ImageBrush ImageSource="/MagsGame;component/Resources/lava.jpg"  Stretch="Fill"></ImageBrush>
                                 </Rectangle.Fill>
