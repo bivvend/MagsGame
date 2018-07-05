@@ -4,10 +4,15 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:board ="clr-namespace:MagsGame.Board"
+        xmlns:pieceview ="clr-namespace:MagsGame.PieceDisplay"
         xmlns:local="clr-namespace:MagsGame"
         mc:Ignorable="d"
         Title="MagsGame" Height="800" Width="1500">
     <Grid>
+        <Grid.Background>
+            <!--<SolidColorBrush Color="Black"></SolidColorBrush>-->
+            <ImageBrush ImageSource="Resources/elements2.jpg" ></ImageBrush>
+        </Grid.Background>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="10*"></ColumnDefinition>
             <ColumnDefinition Width="3*"></ColumnDefinition>
@@ -17,5 +22,6 @@
             <RowDefinition Height="2*"></RowDefinition>
         </Grid.RowDefinitions>
         <board:BoardView x:Name="MainBoardView" Grid.Column="0" Grid.RowSpan="2"></board:BoardView>
+        <pieceview:PieceDisplay x:Name="MainPieceView" Grid.Column="1" Grid.Row="0" Grid.RowSpan="2"></pieceview:PieceDisplay>
     </Grid>
 </Window>

@@ -15,3 +15,6 @@ D:\Github\MagsGame\MagsGame\obj\Debug\MagsGame.pdb
 D:\Github\MagsGame\MagsGame\obj\Debug\Board\BoardView.g.cs
 D:\Github\MagsGame\MagsGame\obj\Debug\Board\BoardView.baml
 D:\Github\MagsGame\MagsGame\obj\Debug\GeneratedInternalTypeHelper.g.cs
+D:\Github\MagsGame\MagsGame\obj\Debug\MagsGame.csprojResolveAssemblyReference.cache
+D:\Github\MagsGame\MagsGame\obj\Debug\PieceDisplay\PieceDisplay.g.cs
+D:\Github\MagsGame\MagsGame\obj\Debug\PieceDisplay\PieceDisplay.baml

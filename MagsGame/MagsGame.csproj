@@ -54,6 +54,11 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="PieceDisplay\PieceDisplay.xaml.cs">
+      <DependentUpon>PieceDisplay.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PieceDisplay\PieceDisplayModel.cs" />
+    <Compile Include="PieceDisplay\PieceDisplayViewModel.cs" />
     <Compile Include="RelayCommand.cs" />
     <Page Include="Board\BoardView.xaml">
       <SubType>Designer</SubType>
@@ -77,6 +82,10 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="PieceDisplay\PieceDisplay.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">
@@ -112,6 +121,18 @@
     <Resource Include="Resources\Earth2.jpg" />
     <Resource Include="Resources\Earth3.jpg" />
     <Resource Include="Resources\Earth4.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\scroll.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\elements.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\elements2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\magma_ranger.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

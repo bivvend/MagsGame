@@ -12,6 +12,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using MagsGame.Board;
+using MagsGame.PieceDisplay;
 
 namespace MagsGame
 {
@@ -20,8 +22,12 @@ namespace MagsGame
     /// </summary>
     public partial class MainWindow : Window
     {
-        public Board.BoardViewModel MainBoardViewModel;
-        public Board.BoardModel MainBoardModel;
+        public BoardViewModel MainBoardViewModel;
+        public BoardModel MainBoardModel;
+
+        public PieceDisplayViewModel MainPieceDisplayViewModel;
+        public PieceDisplayModel MainPieceDisplayModel;
+
 
         private int SizeX = 22;
         public int SizeY = 15;
@@ -29,13 +35,17 @@ namespace MagsGame
         {
             InitializeComponent();
 
-            MainBoardModel = new Board.BoardModel();
-            MainBoardViewModel = new Board.BoardViewModel(MainBoardModel);
+            MainBoardModel = new BoardModel();
+            MainBoardViewModel = new BoardViewModel(MainBoardModel);
             MainBoardViewModel.SizeX = SizeX;
             MainBoardViewModel.SizeY = SizeY;
 
             MainBoardView.DataContext = MainBoardViewModel;
             MainBoardViewModel.Board =  MainBoardModel.CreateBoard(SizeX,SizeY);
+
+            MainPieceDisplayModel = new PieceDisplayModel();
+            MainPieceDisplayViewModel = new PieceDisplayViewModel(MainPieceDisplayModel);
+
         }
     }
 }
